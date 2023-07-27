@@ -19,7 +19,7 @@ if (isset($_SESSION['user'])) {
 <body>
 <div class="container-fluid d-flex justify-content-center py-4  fs-1">
     <div class="row">
-        <div class="col text-light fs-1 py-2 px-4 bg-success ">
+        <div class="col text-light fs-1 py-2 px-4 bg-success rounded">
             Авторизация
         </div>
     </div>
@@ -40,7 +40,7 @@ if (isset($_SESSION['user'])) {
                 </div>
                 <div class="mb-3 d-flex justify-content-center py-5">
                     <button type="submit" class="btn btn-success btn-lg">
-                        <span style="font-size: larger">
+                        <span class="fs-2">
                             Войти
                         </span>
                     </button>
@@ -49,9 +49,9 @@ if (isset($_SESSION['user'])) {
         </div>
     </div>
 </div>
-<div class="container-fluid d-flex justify-content-center py-4  fs-1">
+<div class="container-fluid d-flex justify-content-center py-2  fs-1">
     <div class="row">
-        <div class="col text-light fs-1 py-2 px-4
+        <div class="col text-light fs-5 py-2 px-4 rounded
         <?php
         if ($_SESSION['message']) {
             echo 'bg-success';
@@ -62,7 +62,7 @@ if (isset($_SESSION['user'])) {
         ?> ">
             <?php
             if ($_SESSION['message']) {
-                echo '<p> ' . $_SESSION['message'] . ' </p>';
+                echo  '<span class="fs-2">' . $_SESSION['message'] . '</span>';
             }
             unset($_SESSION['message']);
             ?>

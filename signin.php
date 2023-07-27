@@ -19,7 +19,7 @@ if (count($res) == 1) {
         ];
     header('Location: vendor/application.php');
 } else {
-    $_SESSION['message'] = 'Authorization failed';
+    $_SESSION['message'] = 'Ошибка входа';
     header('Location: index.php');
 }
 
